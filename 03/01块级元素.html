@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: red;
+        padding: 10px;
+      }
+
+      .box > img {
+        float: left;
+      }
+      .clear::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+      .inline-table {
+        display: inline-table;
+        width: 128px;
+        margin-left: 10px;
+        border: 1px solid red;
+      }
+      .inline-table > p {
+        display: table-cell;
+      }
+
+      .table {
+        width: 280px;
+        /* width: auto; */
+        margin: 0 auto;
+        text-align: left;
+      }
+      button {
+        width: 60px;
+      }
+      input{
+        width: 60px;
+      }
+
+      .img { max-width: 256px; }
+    </style>
+  </head>
+  <input>
+    <ul>
+      <li>li</li>
+    </ul>
+    <table>
+      <tr>
+        <td>table</td>
+      </tr>
+    </table>
+    <div class="box clear">
+      <img src="./01.png" alt="" />
+    </div>
+
+    <div>
+      和文字平起平坐的表格：
+      <div class="inline-table">
+        <p>第1列</p>
+        <p>第2列</p>
+      </div>
+    </div>
+
+    <table class="table">
+      <tr>
+        <td>就1列就1列就1列就1列就1列</td>
+        <td>当父级relative，且宽度很小的时候，例如...</td>
+        <td>当父级relative，且宽度很小的时候，例如...</td>
+      </tr>
+    </table>
+    <button>我是button我是button</button>
+    <input value="我是input我是input"></input>
+
+    <img class="img" src="./01.png" style="width:480px!important;">
+
+  </body>
+</html>
